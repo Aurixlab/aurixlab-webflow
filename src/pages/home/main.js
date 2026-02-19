@@ -1,13 +1,6 @@
 import Swiper from 'swiper/bundle'
 import Lenis from '@studio-freight/lenis'
 
-const gsap = window.gsap
-const ScrollTrigger = window.ScrollTrigger
-
-gsap.registerPlugin(ScrollTrigger)
-
-
-
 // ===================================
 // FORCE SCROLL TO TOP ON EVERY PAGE LOAD/REFRESH
 // ===================================
@@ -79,7 +72,8 @@ const lenis = new Lenis({
 // MASTER GSAP ANIMATION CONTROLLER
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
-  
+  const gsap = window.gsap
+  const ScrollTrigger = window.ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
   
   // Connect Lenis with ScrollTrigger
