@@ -73,7 +73,6 @@ const lenis = new Lenis({
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
   const gsap = window.gsap
-  const ScrollTrigger = window.ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
   
   // Connect Lenis with ScrollTrigger
