@@ -71,8 +71,9 @@ const lenis = new Lenis({
 // ===================================
 // MASTER GSAP ANIMATION CONTROLLER
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
   const gsap = window.gsap
+  const ScrollTrigger = window.ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
   
   // Connect Lenis with ScrollTrigger
