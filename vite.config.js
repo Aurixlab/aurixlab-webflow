@@ -1,32 +1,19 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
-const pages = [
-  'home',
-  'about',
-  'brand-visual',
-  'content-film',
-  'growth-marketing',
-  'ai-geo',
-  'home-copy',
-  'our-work',
-  'contact',
-  'ceo',
-  'privacy-policy',
-]
+const page = process.env.PAGE
 
 export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: Object.fromEntries(
-        pages.map(page => [page, resolve(__dirname, `src/pages/${page}/main.js`)])
-      ),
+      input: resolve(__dirname, `src/pages/${page}/main.js`),
       output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: 'chunks/[name]-[hash].js',
+        format: 'iife',
+        name: 'Aurix_' + page.replace(/-/g, '_'),
+        entryFileNames: `${page}.js`,
         assetFileNames: '[name].[ext]',
-        format: 'es',
+        dir: 'dist',
       }
     },
     minify: 'terser'
