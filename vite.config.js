@@ -6,6 +6,7 @@ const page = process.env.PAGE
 export default defineConfig({
   build: {
     outDir: 'dist',
+    emptyOutDir: false,
     rollupOptions: {
       input: resolve(__dirname, `src/pages/${page}/main.js`),
       external: ['gsap', 'gsap/ScrollTrigger'],
