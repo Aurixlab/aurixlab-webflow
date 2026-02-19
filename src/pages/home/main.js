@@ -1,8 +1,8 @@
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Swiper from 'swiper/bundle'
-import 'swiper/css/bundle'
 import Lenis from '@studio-freight/lenis'
+
+const gsap = window.gsap
+const ScrollTrigger = window.ScrollTrigger
 
 gsap.registerPlugin(ScrollTrigger)
 
